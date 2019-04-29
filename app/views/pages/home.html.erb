@@ -1,0 +1,19 @@
+<div class="container">
+  <iframe class="status-map" src="https://ftstewart.isportsman.net/Open/AreaMap.aspx"></iframe>
+
+  <div class="status-details">
+    <div><%= Date.today.to_s %></div>
+    <table class="status-table">
+      <tr>
+        <th>Unit</th>
+        <th>Status</th>
+      </tr>
+      <% @all_units.each do |unit| %>
+      <tr>
+        <td><%= unit.name %></td>
+        <td class="<%= unit.status %>"><%= unit.status %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
