@@ -1,0 +1,9 @@
+<div>
+  <% @all_units.each do |unit| %>
+    <div>
+      <h1><%= unit.unit %></h1>
+      <p><%= "#{unit.date} - #{unit.status}" %></p>
+    </div>
+  <% end %>
+</div>
+
