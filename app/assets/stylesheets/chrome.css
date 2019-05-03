@@ -1,0 +1,9 @@
+.chrome{
+  min-height: 100px;
+  color: white;
+  background-color: lightblue;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}

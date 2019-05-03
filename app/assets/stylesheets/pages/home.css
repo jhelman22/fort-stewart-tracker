@@ -10,3 +10,24 @@ html, body{ height: 100%;}
   flex: 0 0 50%;
   min-height: 100%;
 }
+
+.status-table{
+  padding: 25px;
+}
+
+.status-table td{
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.status-table .open{
+  background-color: lightgreen;
+  color: white;
+}
+
+.status-table .closed{
+  background-color: red;
+  color: white;
+}

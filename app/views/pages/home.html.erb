@@ -2,16 +2,18 @@
   <iframe class="status-map" src="https://ftstewart.isportsman.net/Open/AreaMap.aspx"></iframe>
 
   <div class="status-details">
-    <div><%= Date.today.to_s %></div>
+    <div>Today's Date: <%= Date.today.to_s %></div>
     <table class="status-table">
       <tr>
         <th>Unit</th>
         <th>Status</th>
+        <th>Occupancy</th>
       </tr>
-      <% @all_units.each do |unit| %>
+      <% @todays_closures.each do |unit| %>
       <tr>
-        <td><%= unit.name %></td>
-        <td class="<%= unit.status %>"><%= unit.status %></td>
+        <td><%= unit[:name] %></td>
+        <td class="<%= unit[:status] %>"><%= unit[:status] %></td>
+        <td><%= "#{unit[:curr_occupancy]}/#{unit[:total_occupancy]}" %></td>
       </tr>
       <% end %>
     </table>
